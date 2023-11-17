@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+<main id="main">
+<div id="rule">
+Enter a phone number (with country code if applicable):
+</div><br>
+<input type="tel" id="phone" placeholder="Mobile no."><br><div id="rule2">Message</div>
+<textarea id="text" placeholder="Hii, buddy"></textarea><br><br>
+<a href="" id="links"><button onclick="createlink()" id="clck">Open WhatsApp</button></a>
+</main>
+<script>
+// Function to open WhatsApp
+function createlink(){
+var n,m;
+n = document.getElementById("phone").value
+m = document.getElementById("text").value
+var snm = "https://wa.me/"+n+"?text="+m
+document.getElementById("links").href = snm
+}
+</script>
+<style>
+    body {
+    text-align:center;
+    justify-content:center;
+    color:#fff;
+    background-color:#ff0;
+}
+#rule{
+    font-size:20px;margin-top:150px;
+}
+#rule2{
+    font-size:20px;margin-top:10px;
+}
+#clck{
+    height:40px;width:300px;background-color:#5f5;border-radius:5%;
+}
+input[type="tel"]{
+    border:none;border-bottom:3px solid #555;font-size:15px;text-align:center;
+}
+main{
+    background-color:#000;
+}
+textarea{
+    text-align:center;margin-top:20px;
+}
+</style>
+</body>
+</html>
